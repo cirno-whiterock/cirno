@@ -1,31 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Cirno</title>
-    <link rel="stylesheet" href="styles.css">
+<title>Cirno</title>
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <div class="container">
-        <h1>The Strongest Website</h1>
-        <img src="cirnofumo.gif" alt="fumofumo">
-        <p>baka baka baka baka baka baka baka baka baka baka baka baka</p>
-        <p>                 i am not an idiot</p>
-        <embed src="cirnimation.swf" 
-               quality="high" 
-               width="800" height="600" 
-               name="cirno adventure 2"
-               type="application/x-shockwave-flash" 
-               allowScriptAccess="always"
-               pluginspage="http://www.macromedia.com/go/getflashplayer">
-        </embed>
-        <hr>
-        <h1>Guinea pig gaymings blog</h1>
-        <hr>
-        <p>friday march 13 2026</p>
-        <p>hello this is the f1rst entry in my blog its verry nice blog ik
-        any way im working on beating touhou 7 XDDDDD lol</p>
-    </div>
-    <img src="statment.jfif" alt="fumostatement" id="statement-img">
-    <img src="touhou-fumo.gif" alt="fumodance" id="fumodance-img">
+
+<!-- MUSIC -->
+<audio autoplay loop>
+<source src="ITSAPEICEOFCAKETOBAKEAPRETTYCAKE.mp3" type="audio/mpeg">
+</audio>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <a href="index.html">Home</a>
+    <a href="videos.html">Videos</a>
+    <a href="games.html">Games</a>
+</div>
+
+<!-- ASK BOX -->
+<div class="askbox">
+<h3>Ask Anything</h3>
+<form action="mailto:trahvell@outlook.com" method="post" enctype="text/plain">
+<input type="text" name="name" placeholder="Name"><br>
+<textarea name="message" placeholder="ask something"></textarea><br>
+<button type="submit">Send</button>
+</form>
+</div>
+
+<div class="container">
+
+<h1>The Strongest Website</h1>
+
+<img src="cirnofumo.gif" alt="fumofumo">
+
+<p>baka baka baka baka baka baka baka baka baka baka baka baka</p>
+<p>i am not an idiot</p>
+
+<embed src="cirnimation.swf"
+quality="high"
+width="800"
+height="600"
+name="cirno adventure 2"
+type="application/x-shockwave-flash"
+allowScriptAccess="always">
+</embed>
+
+<hr>
+
+<h1>Guinea pig gaymings blog</h1>
+
+<hr>
+
+<p>friday march 13 2026</p>
+<img src="cirn9car.webp" alt="cirn9car" id="cirn9car-img">
+<p>
+hello this is the f1rst entry in my blog its verry nice blog ik
+any way im working on beating touhou 7 XDDDDD lol
+</p>
+
+<p>friday march 14 2026</p>
+<img src="bouldercirno.jfif" alt="bouldercirno" id="bouldercirno-img">
+<p>
+nothing much happend but i spent the whole day trying to 100%
+cirno lifts a boulder coudnt cuase 1 technical difficalties and
+2 i searched the SDM the floating islands the lake the mountains
+and still coudnt find the last 415/425[P] and 1731/1762[点] but i got all the frogs
+(sadly tho with the guide) pretty fun game tho should play 7.5/10
+cuase it mainly collecting [P] and its fun at first but gets tiring
+after a while and its pretty short but the art is nice cirnos nice
+mechanics are fun and the plot is good but its $5 which does feel 
+a bit much for this game saying as its ppretty much just a walking sim
+but if walking sims were good
+</p>
+
+<p>friday march 15 2026</p>
+<img src="cirno_popcycle.jpg" alt="fumopopcycle" id="fumopopcycle-img">
+<p>
+if the fumo is your power what are you without it
+anyway i saw this picture of a cirno fumo posycle
+on tumblr and i think it looks gut like fine cheese
+reminds me of a faint memory from a couple years back
+eating a sonic posicle for some reason also remindid me of
+an old animation series my onee-sama watched called sonic
+reevvup oh and matpac anyaway go
+support the person who made this art by jotheweirdoz on tumblr
+</p>
+
+</div>
+
+<img src="statment.jfif" alt="fumostatement" id="statement-img">
+<img src="touhou-fumo.gif" alt="fumodance" id="fumodance-img">
+
+<script>
+const music = document.getElementById('bg-music');
+const audioSrc = "ITSAPEICEOFCAKETOBAKEAPRETTYCAKE.mp3";
+
+// Check if music was already playing
+if (!localStorage.getItem('musicPlayed')) {
+    music.src = audioSrc;
+    music.play();
+    localStorage.setItem('musicPlayed', 'true');
+}
+
+// Optional: stop music when user leaves
+window.addEventListener('beforeunload', () => {
+    music.pause();
+});
+</script>
+
 </body>
 </html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cirno - Videos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- MUSIC -->
+<audio autoplay loop id="bg-music">
+    <source src="ITSAPEICEOFCAKETOBAKEAPRETTYCAKE.mp3" type="audio/mpeg">
+</audio>
+
+<!-- TOP BAR -->
+<div class="topbar">
+    <a href="index.html">Home</a>
+    <a href="videos.html">Videos</a>
+    <a href="games.html">Games</a>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="container" style="text-align:center; margin-top:80px;">
+    <h1>Games Page</h1>
+    <p>Sorry! This section is currently under construction.</p>
+    <img src="maintnince.gif" alt="Under Construction" style="max-width:400px; width:100%; height:auto;">
+</div>
+
+<script>
+const music = document.getElementById('bg-music');
+const audioSrc = "ITSAPEICEOFCAKETOBAKEAPRETTYCAKE.mp3";
+
+// Persistent music
+if (!localStorage.getItem('musicPlayed')) {
+    music.src = audioSrc;
+    music.play();
+    localStorage.setItem('musicPlayed', 'true');
+}
+window.addEventListener('beforeunload', () => {
+    music.pause();
+});
+</script>
+
+</body>
+</html>

@@ -5,20 +5,19 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     position: relative;
-    
-    /* ADD THESE FOR THE WHOLE PAGE BACKGROUND */
+
     background-image: url('bg.jfif');
-    background-size: cover;       /* Stretches to fill the screen */
-    background-position: center;  /* Centers the image */
-    background-attachment: fixed; /* Keeps image still when you scroll */
-    background-repeat: no-repeat; /* Prevents tiling */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
 
-/* Optional: Make your text easier to read over the image */
 p {
-    background-color: rgba(255, 255, 255, 0.7); /* See-through white box */
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
     border-radius: 9px;
+    max-width: 500px;   /* limits line length */
 }
 
 .container {
@@ -26,6 +25,7 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 70px;
 }
 
 h1 {
@@ -38,36 +38,69 @@ img {
     height: auto;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
+/* corner images */
 #statement-img {
     position: absolute;
     top: 20px;
     left: 20px;
-    
     width: 300px;
     height: auto;
     z-index: 9;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 #fumodance-img {
     position: absolute;
     top: 20px;
     right: 20px;
-    
     width: 300px;
     height: auto;
     z-index: 9;
+}
+
+/* TOP BAR */
+.topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 10px;
+    z-index: 20;
+}
+
+.topbar a{
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+/* SMALLER BLOG IMAGES */
+#cirn9car-img{
+width:300px;
+height:auto;
+}
+
+/* also good to limit all blog images */
+#bouldercirno-img,
+#fumopopcycle-img{
+max-width:400px;
+height:auto;
+}
+
+/* ASK BOX */
+.askbox{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: white;
+    border: 2px solid black;
+    padding: 10px;
+    width: 200px;
+    z-index: 20;
+}
+
+.askbox textarea{
+    width: 100%;
+    height: 60px;
 }
